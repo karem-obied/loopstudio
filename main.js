@@ -1,7 +1,7 @@
 let image = document.querySelectorAll(".box");
 let counter = 1;
 image.forEach((e) => {
-  e.style.cssText = `background-image: url(/images/desktop/image-${counter}.jpg);`;
+  e.style.cssText = `background-image: url(images/desktop/image-${counter}.jpg);`;
   counter++;
 });
 let close = document.querySelector(".close");
