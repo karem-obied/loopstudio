@@ -1,0 +1,247 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  --Dark-Gray: hsl(0, 0%, 55%);
+  --Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  background-image: url(/images/desktop/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 0;
+}
+header .up {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .up ul {
+  display: flex;
+  transition: 0.5s;
+}
+header .up ul li {
+  position: relative;
+  color: var(--White);
+  font-weight: 400;
+  padding: 10px;
+  cursor: pointer;
+  list-style: none;
+}
+header .up ul li:hover::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: var(--White);
+  bottom: -5px;
+  left: 50%;
+  transition: 1s;
+  transform: translateX(-50%);
+}
+header h1 {
+  font-weight: 300;
+}
+.show {
+  transform: translatex(0) !important;
+}
+.landing {
+  padding: 40px 0;
+}
+.landing .text {
+  width: 45%;
+  font-weight: 300;
+  font-size: 30px;
+  word-wrap: normal;
+  padding: 25px;
+  border: 1px solid var(--White);
+  color: var(--White);
+}
+.hi {
+  display: none !important;
+}
+.close {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+}
+@media (max-width: 375px) {
+  header {
+    background-image: url(/images/mobile/image-hero.jpg);
+  }
+  .landing .text {
+    width: 100%;
+  }
+  header .up ul {
+    transform: translateX(-100%);
+    width: 100%;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 20;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .hi {
+    display: block !important;
+  }
+}
+section.one .container {
+  display: flex;
+  padding: 50px 0;
+}
+section.one .img {
+  width: 100%;
+}
+section.one .img img {
+  width: 100%;
+}
+section.one .text {
+  align-self: flex-end;
+  margin-left: -100px;
+  z-index: 2;
+  flex-basis: 85%;
+  padding: 20px;
+  background-color: var(--White);
+}
+section.one .text h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+section.one .text p {
+  line-height: 1.6;
+  color: var(--Dark-Gray);
+}
+@media (max-width: 375px) {
+  .container {
+    flex-direction: column;
+  }
+  section.one .text {
+    margin-left: 0;
+  }
+}
+section.creations {
+  padding: 50px 0;
+}
+section.creations .container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+section.creations .up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--Black);
+}
+section.creations .up button {
+  background: none;
+  padding: 5px 15px;
+  letter-spacing: 1px;
+  border: 2px solid;
+  cursor: pointer;
+}
+section.creations .imgs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px 0;
+}
+
+section.creations .imgs .box {
+  flex-basis: 24%;
+  padding: 20px;
+  height: 400px;
+  position: relative;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: flex-end;
+}
+section.creations .imgs .box h1 {
+  color: var(--White);
+  font-size: 40px;
+}
+@media (max-width: 375px) {
+  section.creations .imgs .box {
+    height: 150px;
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 375px) {
+  section.creations .imgs .box {
+    height: 150px;
+    flex-basis: 100%;
+  }
+}
+footer {
+  padding: 50px;
+  background-color: var(--Black);
+}
+footer .container,
+footer .container .up,
+.bottom,
+footer ul {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+footer .container .up,
+.bottom {
+  align-items: flex-end;
+  flex-direction: column;
+}
+.bottom {
+  align-items: flex-start;
+}
+footer ul li {
+  list-style: none;
+  padding: 10px;
+  color: var(--White);
+}
+footer ul li:first-child {
+  padding-left: 0;
+}
+footer span {
+  color: var(--Dark-Gray);
+}
+@media (max-width: 375px) {
+  footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .bottom {
+    align-self: center;
+  }
+  .bottom ul {
+    flex-direction: column;
+    align-self: center;
+  }
+  .up ul {
+    align-self: center;
+  }
+}
